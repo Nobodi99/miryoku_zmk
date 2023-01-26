@@ -33,14 +33,14 @@ MIRYOKU_X(ACC,    "Acc")
 #define U_NUM    7
 #define U_SYM    8
 #define U_FUN    9
-#define U_Acc    10
+#define U_ACC    10
 
 // Layermapping
 #define MIRYOKU_LAYERMAPPING_ACC MIRYOKU_MAPPING
 
 // Layer layout defines
 
-#define MIRYOKU_LAYERS_ACC \
+#define MIRYOKU_LAYER_ACC \
 U_NU,             U_NU,             U_NU,             U_NU,             U_NU,              U_NU,              U_NU,              &de_ue,            U_NU,              U_NU,             \
 &de_ae,           U_NU,             U_NU,             U_NU,             U_NU,              U_NU,              U_NU,              U_NU,              U_NU,              &de_oe,           \
 U_NU,             U_NU,             U_NU,             U_NU,             U_NU,              U_NU,              U_NU,              U_NU,              U_NU,              U_NU,             \
