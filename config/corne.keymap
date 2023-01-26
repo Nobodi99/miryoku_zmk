@@ -4,3 +4,5 @@
 #include "../miryoku/custom_config.h"
 #include "../miryoku/mapping/42/corne.h"
 #include "../miryoku/miryoku.dtsi"
+#include "../miryoku/zmk-nodefree-config/helper.h"
+#include "../miryoku/zmk-nodefree-config/international_chars/german.dtsi"

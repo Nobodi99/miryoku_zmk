@@ -2,8 +2,8 @@
 // https://github.com/manna-harbour/miryoku
 
 // Include for unicode
-#include "zmk-nodefree-config/helper.h"
-#include "zmk-nodefree-config/international_chars/german.dtsi"
+//#include "zmk-nodefree-config/helper.h"
+//#include "zmk-nodefree-config/international_chars/german.dtsi"
 
 // Layer name defines
 #define MIRYOKU_LAYER_LIST \
