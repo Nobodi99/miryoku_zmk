@@ -3,11 +3,7 @@
 
 // Include for unicode
 #include "zmk-nodefree-config/helper.h"
-
-// Unicode definitions
-ZMK_UNICODE_PAIR( de_ae,   N0, N0,  E, N4,   N0, N0,  C, N4 )
-ZMK_UNICODE_PAIR( de_oe,   N0, N0,  F, N6,   N0, N0,  D, N6 )
-ZMK_UNICODE_PAIR( de_ue,   N0, N0,  F,  C,   N0, N0,  D,  C )
+#include "zmk-nodefree-config/international_chars/german.dtsi"
 
 // Layer name defines
 #define MIRYOKU_LAYER_LIST \
@@ -42,7 +38,7 @@ MIRYOKU_X(ACC,    "Acc")
 
 #define MIRYOKU_LAYER_ACC \
 U_NU,             U_NU,             U_NU,             U_NU,             U_NU,              U_NU,              U_NU,              &de_ue,            U_NU,              U_NU,             \
-&de_ae,           U_NU,             U_NU,             U_NU,             U_NU,              U_NU,              U_NU,              U_NU,              U_NU,              &de_oe,           \
+&de_ae,           U_NU,             &de_eszett,       U_NU,             U_NU,              U_NU,              U_NU,              U_NU,              U_NU,              &de_oe,           \
 U_NU,             U_NU,             U_NU,             U_NU,             U_NU,              U_NU,              U_NU,              U_NU,              U_NU,              U_NU,             \
 U_NP,             U_NP,             U_NU,             U_NU,             U_NU,              U_NU,              U_NU,              U_NU,              U_NP,              U_NP
 
