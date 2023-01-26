@@ -1,17 +1,18 @@
 # Copyright 2022 Manna Harbour
 # https://github.com/manna-harbour/miryoku
 
-name: 'Build Inputs'
+name: 'Build Inputs Unicode'
 on:
   workflow_dispatch:
     inputs:
       board:
         description: 'board'
         required: true
+        default: 'nice_nano_v2'
       shield:
         description: 'shield'
         required: false
-        default: 'default'
+        default: 'corne_left,corne_right'
       alphas:
         description: 'alphas'
         required: false
@@ -62,15 +63,15 @@ on:
       custom_config:
         description: 'custom_config'
         required: false
-        default: 'default'
+        default: '#define MIRYOKU_KLUDGE_MOUSEKEYSPR'
       kconfig:
         description: 'kconfig'
         required: false
-        default: 'default'
+        default: 'CONFIG_ZMK_MOUSE=y'
       branches:
         description: 'branches'
         required: false
-        default: 'default'
+        default: 'zmkfirmware/zmk/main ftc/zmk/mouse-ftc'
 jobs:
   process-inputs:
     runs-on: ubuntu-latest
@@ -105,8 +106,7 @@ jobs:
           set-output "kconfig" "${{ github.event.inputs.kconfig }}"
           set-output "branches" "${{ github.event.inputs.branches }}"
   build:
-    uses: ./.github/workflows/main.yml
-    uses: urob/zmk/.github/workflows/build-user-config.yml@build-with-submodules
+    uses: ./.github/workflows/main.yml, urob/zmk/.github/workflows/build-user-config.yml@build-with-submodules
     secrets: inherit
     needs: process-inputs
     with:
